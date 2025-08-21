@@ -24,4 +24,8 @@ def handler(request):
     payment_data["signature"] = generate_signature(payment_data)
     payment_url = build_payment_url("https://sandbox.payfast.co.za/eng/process", payment_data)
     
-    return {"paymentUrl": payment_url}
+    return ({"paymentUrl": payment_url})
+
+
+
+
