@@ -7,7 +7,7 @@ db = firestore.client()
 
 def create_pass(user_id, pass_type):
     trips_map = {"daily": 2, "weekly": 10, "monthly": 30}
-    expiry_map = {"daily": 1, "weekly": 7, "monthly": 30}
+    expiry_map = {"daily": 3, "weekly": 15, "monthly": 60}
 
     expiry_date = (datetime.now() + timedelta(days=expiry_map[pass_type])).isoformat()
     db.collection("passes").add({
